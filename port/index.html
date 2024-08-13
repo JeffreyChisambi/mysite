@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Thelmer's Portfolio</title>
+		<!-- Tailwind CSS CDN -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+			rel="stylesheet" />
+		<!-- ScrollReveal.js CDN -->
+		<script src="https://unpkg.com/scrollreveal"></script>
+		<!-- particles.js CDN -->
+		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+		<link rel="stylesheet" href="styles.css" />
+		<style>
+			/* Custom scrollbar */
+			::-webkit-scrollbar {
+				width: 8px;
+			}
+			::-webkit-scrollbar-track {
+				background: #1a202c;
+			}
+			::-webkit-scrollbar-thumb {
+				background: #4a5568;
+				border-radius: 4px;
+			}
+			::-webkit-scrollbar-thumb:hover {
+				background: #718096;
+			}
+		</style>
+	</head>
+	<body class="bg-gray-900 text-white">
+		<!-- Particles.js container -->
+		<div id="particles-js" class="absolute inset-0 z-15"></div>
+		<header class="mt-4 center">
+			<div class="cursor-inner" id="cursor-inner"></div>
+			<div class="cursor-outer" id="cursor-outer"></div>
+
+			<div class="navbar" id="navbar">
+				<div class="hey">Hey! i know how to code</div>
+				<div class="logo" tabindex="0" aria-label="thelmer">
+					<div class="logo-top">
+						<img src="./vrlogo.png" alt="animation-head" id="nav-avatar" />
+					</div>
+				</div>
+				<div class="navbar-tabs" id="navbar-tabs">
+					<ul class="navbar-tabs-ul">
+						<li
+							class="home activeThistab"
+							class="navbar-tabs-li"
+							data-aos="fade-down"
+							data-aos-delay="100">
+							<a href="#home" tabindex="0" aria-label="Home menu button">
+								&#60;/Home&#62;
+							</a>
+						</li>
+
+						<li
+							class="about"
+							class="navbar-tabs-li"
+							data-aos="fade-down"
+							data-aos-delay="300">
+							<a href="#about" aria-label="about menu button">
+								&#60;/AboutMe&#62;
+							</a>
+						</li>
+
+						<li
+							class="skills"
+							class="navbar-tabs-li"
+							data-aos="fade-down"
+							data-aos-delay="500">
+							<a href="#skills" aria-label="skills menu button">
+								&#60;/Skills&#62;
+							</a>
+						</li>
+
+						<li
+							class="projects"
+							class="navbar-tabs-li"
+							data-aos="fade-down"
+							data-aos-delay="700">
+							<a href="#projects" aria-label="projects menu button">
+								&#60;/Projects&#62;
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- navbar tabs ends -->
+			</div>
+		</header>
+		<!-- header ends here -->
+		<!-- hamburger -->
+		<div class="hamburger" id="hamburger" data-aos="fade">
+			<div class="hamburgerbase">
+				<button
+					id="hamburger-button"
+					onclick="hamburgerMenu()"
+					tabindex="0"
+					aria-label="Menu Button">
+					<span class="burger-bar" id="burger-bar1"></span>
+					<span class="burger-bar" id="burger-bar2"></span>
+					<span class="burger-bar" id="burger-bar3"></span>
+				</button>
+			</div>
+		</div>
+		<!-- hamburger -->
+		<div class="mobiletogglemenu" id="mobiletogglemenu">
+			<ul class="mobile-navbar-tabs-ul" id="mobile-ul">
+				<li
+					id="home-mobile-tab"
+					class="mobile-navbar-tabs-li home activeThismobiletab"
+					onclick="hidemenubyli()">
+					<a href="#home" tabindex="0" aria-label="Home menu button">
+						&#60;Home/&#62;
+					</a>
+				</li>
+
+				<li
+					id="aboutme-mobile-tab"
+					class="mobile-navbar-tabs-li about"
+					onclick="hidemenubyli()">
+					<a href="#about" tabindex="0" aria-label="about menu button">
+						&#60;AboutMe/&#62;
+					</a>
+				</li>
+				<li
+					id="skills-mobile-tab"
+					class="mobile-navbar-tabs-li skills"
+					onclick="hidemenubyli()">
+					<a href="#skills" tabindex="0" aria-label="skills menu button">
+						&#60;Skills/&#62;
+					</a>
+				</li>
+				<li
+					id="projects-mobile-tab"
+					class="mobile-navbar-tabs-li projects"
+					onclick="hidemenubyli()">
+					<a href="#projects" tabindex="0" aria-label="projects menu button">
+						&#60;Projects/&#62;
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Main Content -->
+	<div class="relative z-10 flex flex-col items-center justify-center h-screen">
+    <div class="text-center">
+        <!-- Updated image size -->
+        <img src="./vrlogo.png" alt="Thelmer" class="rounded-full w-32 h-32 sm:w-48 sm:h-48 mx-auto mb-6" />
+
+        <!-- Updated heading size -->
+        <h1 class="text-4xl sm:text-9xl lg:text-9xl font-bold mb-4">Hi, I'm Thelmer 👋</h1>
+
+        <!-- Updated paragraph size -->
+        <p class="text-xl sm:text-6xl lg:text-5xl">
+            Building digital <span class="text-yellow-500">products</span>,
+            <span class="text-yellow-500">brands</span>, and
+            <span class="text-yellow-500">experience</span>.
+        </p>
+    </div>
+
+    <!-- Updated button size -->
+    <div class="mt-10">
+        <button class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-lg text-lg sm:text-xl lg:text-2xl">
+            Latest Shots
+        </button>
+    </div>
+</div>
+
+		<!-- about section -->
+		<!-- About Section -->
+		<section id="about" class="py-20 bg-gray-800 text-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-12">
+					<h2 class="text-4xl font-bold mb-4">About Me</h2>
+					<p class="text-lg text-gray-400">
+						Get to know more about who I am and what I do.
+					</p>
+				</div>
+				<div class="flex flex-col lg:flex-row items-center">
+					<!-- Profile Image -->
+					<div class="w-full lg:w-1/2 mb-8 lg:mb-0 lg:pr-10">
+						<img
+							src="./vrlogo.png"
+							alt="Thelmer's Photo"
+							class="rounded-lg shadow-lg mx-auto" />
+					</div>
+					<!-- Content -->
+					<div class="w-full lg:w-1/2">
+						<h3 class="text-3xl font-semibold mb-6">Hi, I'm Thelmer 👋</h3>
+						<p class="text-lg leading-relaxed mb-6">
+							I am a passionate digital product designer with extensive
+							experience in building brands, products, and engaging user
+							experiences. My journey started with a love for creativity and
+							technology, which has driven me to continuously push the
+							boundaries of what's possible in the digital space.
+						</p>
+						<p class="text-lg leading-relaxed mb-6">
+							My skill set includes UI/UX design, front-end development, and
+							brand strategy. I thrive on collaborating with like-minded
+							professionals and businesses to create impactful results that
+							resonate with audiences.
+						</p>
+						<div class="mt-6">
+							<a
+								href="#portfolio"
+								class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-full">
+								View My Work
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- projects  -->
+		<!-- Projects Section -->
+		<section id="projects" class="py-20 bg-gray-900 text-white">
+			<div class="container mx-auto px-4">
+				<div class="text-center mb-12">
+					<h2 class="text-4xl font-bold mb-4">My Projects</h2>
+					<p class="text-lg text-gray-400">
+						Check out some of the amazing projects I've worked on.
+					</p>
+				</div>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<!-- Project Card 1 -->
+					<div
+						class="relative group bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
+						<img
+							src="./thelmer.png"
+							alt="Project 1"
+							class="w-full h-56 object-cover group-hover:opacity-80 transition-opacity duration-500" />
+						<div class="p-6">
+							<h3 class="text-2xl font-bold mb-2">Thelmer Portfolio</h3>
+							<p class="text-gray-400 mb-4">
+							Portfolio website desing
+							</p>
+							<a
+								href="thelmer.free.nf"
+								target="_blank"
+								class="inline-block bg-yellow-500 text-white font-bold py-2 px-4 rounded-full hover:bg-yellow-600 transition-colors duration-300"
+								>View Project</a
+							>
+						</div>
+					</div>
+					<!-- Project Card 2 -->
+					<div
+						class="relative group bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
+						<img
+							src="./gheto.png"
+							alt="Project 2"
+							class="w-full h-56 object-cover group-hover:opacity-80 transition-opacity duration-500" />
+						<div class="p-6">
+							<h3 class="text-2xl font-bold mb-2">Ghetto Hustle/h3>
+							<p class="text-gray-400 mb-4">
+								An E-commerce Platform
+							</p>
+							<a
+								href="#"
+								target="_blank"
+								class="inline-block bg-yellow-500 text-white font-bold py-2 px-4 rounded-full hover:bg-yellow-600 transition-colors duration-300"
+								>View Project</a
+							>
+						</div>
+					</div>
+					<!-- Project Card 3 -->
+					<div
+						class="relative group bg-gray-800 rounded-lg overflow-hidden shadow-lg transform transition-transform duration-500 hover:scale-105">
+						<img
+							src="path-to-project-image-3.jpg"
+							alt="Project 3"
+							class="w-full h-56 object-cover group-hover:opacity-80 transition-opacity duration-500" />
+						<div class="p-6">
+							<h3 class="text-2xl font-bold mb-2">AI Generating Image</h3>
+							<p class="text-gray-400 mb-4">
+								Image AI
+							<a
+								href="project-link-3.html"
+								target="_blank"
+								class="inline-block bg-yellow-500 text-white font-bold py-2 px-4 rounded-full hover:bg-yellow-600 transition-colors duration-300"
+								>View Project</a
+							>
+						</div>
+					</div>
+					<!-- Add more cards as needed -->
+				</div>
+			</div>
+		</section>
+        <!-- contact  -->
+         <!-- Contact Section -->
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4">Get in Touch</h2>
+            <p class="text-lg text-gray-400">I'd love to hear from you! Whether you have a project in mind or just want to say hello, feel free to drop a message.</p>
+        </div>
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-gray-800 p-8 md:p-12 rounded-lg shadow-lg">
+                <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-6">
+                    <div class="flex flex-col md:flex-row md:space-x-4 space-y-6 md:space-y-0">
+                        <!-- Name Field -->
+                        <div class="w-full md:w-1/2">
+                            <label for="name" class="block text-lg font-medium text-gray-300 mb-2">Name</label>
+                          <input type="text" placeholder="enter your name" class="px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-colors duration-300 ">
+                        </div>
+                        <!-- Email Field -->
+                        <div class="w-full md:w-1/2">
+                            <label for="email" class="block text-lg font-medium text-gray-300 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-colors duration-300">
+                        </div>
+                    </div>
+                    <!-- Message Field -->
+                    <div>
+                        <label for="message" class="block text-lg font-medium text-gray-300 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-colors duration-300"></textarea>
+                    </div>
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit" class="bg-yellow-500 text-white font-bold py-3 px-8 rounded-full hover:bg-yellow-600 transition-transform duration-300 transform hover:scale-105">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- footer   -->
+ <!-- Footer Section -->
+<footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- About Section -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">About Thelmer</h3>
+                <p class="text-gray-400 leading-relaxed">
+                    I am Thelmer, a passionate developer and designer with a keen eye for detail. My mission is to create impactful digital experiences that resonate with users and drive success.
+                </p>
+                <a href="#about" class="mt-4 inline-block bg-yellow-500 text-white font-bold py-2 px-4 rounded-full hover:bg-yellow-600 transition-colors duration-300">Learn More</a>
+            </div>
+            <!-- Contact Info Section -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">Contact Info</h3>
+                <ul class="space-y-4">
+                    <li>
+                        <i class="fas fa-map-marker-alt text-yellow-500"></i>
+                        <span class="ml-2">mzuzu, malawi, africa</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone text-yellow-500"></i>
+                        <span class="ml-2">(265) 990-034-2842</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope text-yellow-500"></i>
+                        <span class="ml-2">hello@thelmer.dev</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- Quick Links Section -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">Quick Links</h3>
+                <ul class="space-y-4">
+                    <li><a href="#projects" class="hover:text-yellow-500 transition-colors duration-300">Projects</a></li>
+                    <li><a href="#about" class="hover:text-yellow-500 transition-colors duration-300">About</a></li>
+                    <li><a href="#contact" class="hover:text-yellow-500 transition-colors duration-300">Contact</a></li>
+                    <li><a href="#blog" class="hover:text-yellow-500 transition-colors duration-300">Blog</a></li>
+                </ul>
+            </div>
+            <!-- Social Media Section -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-white mb-4">Follow Me</h3>
+                <div class="flex space-x-4">
+                    <a href="https://twitter.com/thelmer" target="_blank" class="text-gray-400 hover:text-yellow-500 transition-colors duration-300">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/thelmer" target="_blank" class="text-gray-400 hover:text-yellow-500 transition-colors duration-300">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/thelmer" target="_blank" class="text-gray-400 hover:text-yellow-500 transition-colors duration-300">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://instagram.com/thelmer" target="_blank" class="text-gray-400 hover:text-yellow-500 transition-colors duration-300">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Divider -->
+        <div class="my-8 border-t border-gray-800"></div>
+        <!-- Copyright and Credits -->
+        <div class="text-center text-gray-500">
+            <p>&copy; 2024 Thelmer. All rights reserved.</p>
+            <p>Website designed and developed by Thelmer with <span class="text-yellow-500">&hearts;</span></p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+		<script src="main.js"></script>
+		<script>
+			particlesJS("particles-js", {
+				particles: {
+					number: {
+						value: 100, // Increase the number of particles
+						density: {
+							enable: true,
+							value_area: 800,
+						},
+					},
+					color: {
+						value: "#ffffff", // Set particle color to white
+					},
+					shape: {
+						type: "circle", // Ensure the particles are circles
+						stroke: {
+							width: 0,
+							color: "#000000",
+						},
+					},
+					opacity: {
+						value: 0.5, // Make particles semi-transparent
+						random: true, // Randomize opacity
+						anim: {
+							enable: true, // Enable opacity animation
+							speed: 1,
+							opacity_min: 0.1,
+							sync: false,
+						},
+					},
+					size: {
+						value: 5, // Base size of particles
+						random: true, // Randomize particle size
+						anim: {
+							enable: true, // Enable size animation
+							speed: 20,
+							size_min: 0.1,
+							sync: false,
+						},
+					},
+					line_linked: {
+						enable: true, // Enable linking lines between particles
+						distance: 150, // Distance between linked particles
+						color: "#ffffff", // Color of linking lines
+						opacity: 0.4, // Opacity of linking lines
+						width: 1,
+					},
+					move: {
+						enable: true, // Enable particle movement
+						speed: 3, // Speed of particle movement
+						direction: "none", // Movement direction
+						random: true, // Randomize movement direction
+						straight: false, // Prevent straight movement
+						out_mode: "out", // Particles move out of canvas boundary
+						attract: {
+							enable: false,
+							rotateX: 600,
+							rotateY: 1200,
+						},
+					},
+				},
+				interactivity: {
+					detect_on: "canvas", // Detect interactivity on canvas
+					events: {
+						onhover: {
+							enable: true, // Enable interaction on hover
+							mode: "repulse", // Repulse particles on hover
+						},
+						onclick: {
+							enable: true, // Enable interaction on click
+							mode: "push", // Add particles on click
+						},
+						resize: true, // Enable responsive particles
+					},
+					modes: {
+						grab: {
+							distance: 400,
+							line_linked: {
+								opacity: 1,
+							},
+						},
+						bubble: {
+							distance: 400,
+							size: 40,
+							duration: 2,
+							opacity: 8,
+							speed: 3,
+						},
+						repulse: {
+							distance: 200,
+							duration: 0.4,
+						},
+						push: {
+							particles_nb: 4,
+						},
+						remove: {
+							particles_nb: 2,
+						},
+					},
+				},
+				retina_detect: true, // Enable retina support
+			});
+
+			//scroll code
+			ScrollReveal().reveal(".text-center", {
+				delay: 200,
+				distance: "50px",
+				origin: "bottom",
+			});
+			ScrollReveal().reveal(".bg-yellow-500", {
+				delay: 500,
+				distance: "20px",
+				origin: "bottom",
+			});
+
+			//cursor
+
+			const cursorInner = document.getElementById("cursor-inner");
+			const cursorOuter = document.getElementById("cursor-outer");
+			const links = document.querySelectorAll("a,label,button");
+
+			document.addEventListener("mousemove", function (e) {
+				const posX = e.clientX;
+				const posY = e.clientY;
+
+				cursorInner.style.left = `${posX}px`;
+				cursorInner.style.top = `${posY}px`;
+
+				// cursorOuter.style.left = `${posX}px`;
+				// cursorOuter.style.top = `${posY}px`;
+
+				cursorOuter.animate(
+					{
+						left: `${posX}px`,
+						top: `${posY}px`,
+					},
+					{ duration: 500, fill: "forwards" }
+				);
+
+				links.forEach((link) => {
+					link.addEventListener("mouseenter", () => {
+						cursorInner.classList.add("hover");
+						cursorOuter.classList.add("hover");
+					});
+					link.addEventListener("mouseleave", () => {
+						cursorInner.classList.remove("hover");
+						cursorOuter.classList.remove("hover");
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
